@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Basic counter</title>
+</head>
+<body>
+  <h1>Counter <span id="counter"></span></h1>
+  <div>
+    <button onclick="grow(1)">Grow by 1</button>
+    <button onclick="shrink(1)">Shrink by 1</button>
+  </div>
+  <div>
+    <button onclick="grow(10)">Grow by 10</button>
+    <button onclick="shrink(10)">Shrink by 10</button>
+  </div>
+
+  <script>
+    var counter = 0
+    var min = 0
+    var max = 100
+
+    function update () {
+      document.getElementById('counter').innerHTML = counter
+    }
+    function grow (amount) {
+      if (counter + amount <= max) {
+        counter += amount
+        update()
+      }
+    }
+    function shrink (amount) {
+      if (counter - amount >= min) {
+        counter -= amount
+        update()
+      }
+    }
+    
+    update()
+  </script>
+</body>
+</html>

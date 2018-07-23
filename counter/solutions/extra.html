@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Advanced counter</title>
+
+  <style>
+    #progresswrapper {
+      border: solid 1px black;
+      margin: 10px 0;
+    }
+    #progress {
+      height: 10px;
+      width: 0%;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Counter <span id="counter"></span></h1>
+  <div id="progresswrapper">
+    <div id="progress"></div>
+  </div>
+  <div>
+    <button onclick="counter.grow(1, updateDom)">Grow by 1</button>
+    <button onclick="counter.shrink(1, updateDom)">Shrink by 1</button>
+  </div>
+  <div>
+    <button onclick="counter.grow(10, updateDom)">Grow by 10</button>
+    <button onclick="counter.shrink(10, updateDom)">Shrink by 10</button>
+  </div>
+
+  <script>
+    var counter = ((min, max, initial) => {
+      var value = initial || 0
+      var isValid = (newValue) => (newValue >= min && newValue <= max)
+
+      return {
+        grow: (amount, callback) => {
+          if (!isValid(value + amount)) return
+          console.log('Growing...')
+          value += amount || 1
+          if (callback && typeof callback === 'function') callback(value)
+        },
+        shrink: (amount, callback) => {
+          if (!isValid(value - amount)) return
+          console.log('Shrinking...')
+          value -= amount || 1
+          if (callback && typeof callback === 'function') callback(value)
+        },
+        getValue: () => value
+      }
+    })(0, 100)
+
+    var updateDom = () => {
+      document.getElementById('counter').innerHTML = counter.getValue()
+      document.getElementById('progress').style.width = counter.getValue() + '%'
+    }
+    updateDom()
+  </script>
+</body>
+</html>
