@@ -1,3 +1,5 @@
+:warning: This repository is still in its early stages. I am working on adding more exercises but I would appreciate your help. Please refer to the [contributing](#contributing) section.
+
 # Introduction
 This repository contains several exercises to get started with JavaScript.
 
@@ -16,3 +18,23 @@ Start coding! :smiley:
 
 # Exercises
 1. [Counter](./counter)
+
+# Contributing
+## Your help is appreciated
+In order to be useful this repository needs a lot more exercises. If you have some spare time and want to contribute your own exercises I would be very glad to recieve a pull request from you.
+
+## How to contribute
+To contribute just fork this repository, make your changes and open up a pull request. Please refer to the following article to get help on how to properly contribute.
+https://gist.github.com/Chaser324/ce0505fbed06b947d962
+
+## What to include
+Please make sure to describe the exercise extensively in your readme file.
+
+The idea is to have a basics part for absolute beginners and an advanced part for people who feel more comfortable. The advanced part should actually be a little tricky. A beginner should not be able to do it with ease.
+
+Don't worry if you can only implement one of those parts. It is still very helpful and can be interesting to everybody.
+
+If you want to change something on the base (e.g. the readme, the basic idea) feel free to do so. Just mention it in the pull request and also say why you want do to that change.
+
+## Example exercise
+Take the [counter](./counter) exercise as an example and also use its readme as a base.
