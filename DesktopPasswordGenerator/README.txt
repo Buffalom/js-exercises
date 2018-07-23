@@ -13,3 +13,11 @@ Links:
   https://github.com/sindresorhus/generator-electron
   https://github.com/sindresorhus/awesome-electron#boilerplates
   https://electronjs.org/
+
+
+
+Hier eine Aufgabe um auch zu sehen, das Js auch mittlerweile auf Desktop Einzug Hält.
+    +Electron kennen Lernen
+    +Js lernen
+    +Npm und Node kennen Lernen
+    +Verstehen wie Slack, Atome, Discord, GithubDesktop, Skype usw funktionieren
