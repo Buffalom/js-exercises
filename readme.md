@@ -10,5 +10,9 @@ To get started with an exercise click on the corresponding subfolder and read th
 
 If you want you can use the [base](./base) folder as your base. This contains basic code that you can use to get started quickly.
 
+Copy the base folder or create your own html file and open it in your browser.
+
+Start coding! :smiley:
+
 # Exercises
 1. [Counter](./counter)

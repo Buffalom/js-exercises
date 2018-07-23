@@ -26,7 +26,7 @@ Try rewriting your code so that you can not directly access and especially not c
 ### Tasks
 1. Declare the counter so that it is not global.
 
-### Hints
+### Hint
 ~~One clean way to do this is using what is called a closure. Look it up!~~
 
 ## Extra
