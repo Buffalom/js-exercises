@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Advanced unit converter</title>
+</head>
+<body>
+  <h1>Unit Converter</h1>
+  <p>Convert distances</p>
+  <div>
+    <p>
+      <input type="text" name="aInput" id="aInput" class="convert" data-selector="a">
+      <select name="aUnit" id="aUnit" class="convert" data-selector="a">
+        <option value="m">Meter</option>
+        <option value="km">Kilometer</option>
+        <option value="ft">Foot</option>
+        <option value="mi">Mile</option>
+      </select>
+    </p>
+    <p>
+      <input type="text" name="bInput" id="bInput" class="convert" data-selector="b">
+      <select name="bUnit" id="bUnit" class="convert" data-selector="b">
+        <option value="m">Meter</option>
+        <option value="km">Kilometer</option>
+        <option value="ft">Foot</option>
+        <option value="mi">Mile</option>
+      </select>
+    </p>
+  </div>
+  <div>
+    <p id="error"></p>
+  </div>
+
+  <script>
+    function writeError (message = '') {
+      document.getElementById('error').innerHTML = message
+    }
+    function clearError () {
+      writeError('')
+    }
+    function isValid (input) {
+      return Boolean(input.match(/^-?\d[\d\.]*$/))
+    }
+
+    var conversionMatrix = {
+      m: {
+        m: a => a,
+        km: a => a * 1000,
+        ft: a => a * 3.2808399,
+        mi: a => a * 0.000621371,
+      },
+      km: {
+        m: a => a * 0.001,
+        km: a => a,
+        ft: a => a * 3280.84,
+        mi: a => a * 0.621371,
+      },
+      ft: {
+        m: a => a * 0.3048,
+        km: a => a * 0.0003048,
+        ft: a => a,
+        mi: a => a * 0.000189394,
+      },
+      mi: {
+        m: a => a * 1609.33999997549,
+        km: a => a * 1.60934,
+        ft: a => a * 5280,
+        mi: a => a,
+      },
+    }
+    function convert (value, from, to) {
+      if (isValid(value)) {
+        clearError()
+        return conversionMatrix[from][to](parseInt(value))
+      } else {
+        writeError('The input for a is not valid.')
+        return ''
+      }
+    }
+
+    function doConversion () {
+      let fromSelector = this.getAttribute('data-selector')
+      let from = {
+        input: this,
+        unitSelect: document.getElementById(fromSelector+ 'Unit')
+      }
+      let toSelector = fromSelector === 'a' ? 'b' : 'a'
+      let to = {
+        input: document.getElementById(toSelector + 'Input'),
+        unitSelect: document.getElementById(toSelector + 'Unit')
+      }
+      
+      to.input.value = convert(from.input.value, from.unitSelect.value, to.unitSelect.value)
+    }
+
+    let elements = document.getElementsByClassName('convert')
+    for (let i = 0; i < elements.length; i++) {
+      const el = elements[i]
+      if (el.tagName === 'INPUT') el.addEventListener('keyup', doConversion)
+      if (el.tagName === 'SELECT') el.addEventListener('change', doConversion)
+    }
+  </script>
+</body>
+</html>
