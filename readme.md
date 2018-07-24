@@ -24,7 +24,13 @@ Start coding! :smiley:
 In order to be useful this repository needs a lot more exercises. If you have some spare time and want to contribute your own exercises I would be very glad to recieve a pull request from you.
 
 ## How to contribute
-To contribute just fork this repository, make your changes and open up a pull request. Please refer to the following article to get help on how to properly contribute.
+### Ideas
+If you have an idea for an exercise that might be helpful please open up an issue and describe detailed what you want to teach or learn with that exercise.
+
+You can then discuss it there and if you do not want to implement it someone else will do it eventually.
+
+### Exercises
+To contribute an exercise just fork this repository, make your changes and open up a pull request. Please refer to the following article to get help on how to properly contribute.
 https://gist.github.com/Chaser324/ce0505fbed06b947d962
 
 ## What to include
@@ -36,5 +42,5 @@ Don't worry if you can only implement one of those parts. It is still very helpf
 
 If you want to change something on the base (e.g. the readme, the basic idea) feel free to do so. Just mention it in the pull request and also say why you want do to that change.
 
-## Example exercise
-Take the [counter](./counter) exercise as an example and also use its readme as a base.
+## Template
+Take the [counter](./counter) exercise as an example and use the [readme.template.md](./contributing/readme.template.md) in the [contributing](./contributing) folder as a template for your exercise readme.
