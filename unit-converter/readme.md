@@ -20,4 +20,9 @@ Make the user able to choose what he wants to convert. E.g. meter to yard or kil
 ### Tasks
 1. Convert when the value has changed and not when the button is clicked.
 2. Add the possibility to convert different units of distances.
+* Try doing it with as few lines of code as possible.
 * Maybe add the possibility to convert different kinds of units such as distance, weight, temperature... Make sure you cannot convert distance to weight, temperature to distance...
+
+### Hint
+~~To do it with fewer lines of code go step by step. Think about what you could make simpler and do that before you go about any other section.~~
+~~Maybe try doing it with some kind of matrix.~~
