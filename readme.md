@@ -18,6 +18,7 @@ Start coding! :smiley:
 
 # Exercises
 1. [Counter](./counter)
+2. [Unit Converter](./unit-converter)
 
 # Contributing
 ## Your help is appreciated
