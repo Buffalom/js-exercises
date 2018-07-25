@@ -19,6 +19,7 @@ Start coding! :smiley:
 # Exercises
 1. [Counter](./counter)
 2. [Unit Converter](./unit-converter)
+2. [Fibonacci](./fibonacci)
 
 # Contributing
 ## Your help is appreciated
