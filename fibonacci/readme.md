@@ -10,4 +10,4 @@ We will be adding a \<p>-tag for every number in the sequence to list all the nu
 2. Then code the feature that calls the previously made function for every number of the sequence.
 3. Make sure to add a condition that stops you from going beyond a certain number.
 4. If you have not done that yet, try to implement the same thing using [recursive function calling](https://medium.com/@zfrisch/understanding-recursion-in-javascript-992e96449e03). Read about it first and make sure you understand the idea well.
-* Try adding a delay for every new number that's displayed.
+5. Try adding a delay for every new number that's displayed.

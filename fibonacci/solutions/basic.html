@@ -15,8 +15,10 @@
     }
     function fibonacci (a, b, stop = 100) {
       if (b <= stop) {
-        write(b)
-        fibonacci(b, a + b, stop)
+        setTimeout(() => {
+          write(b)
+          fibonacci(b, a + b, stop)
+        }, 200)
       }
     }
 
