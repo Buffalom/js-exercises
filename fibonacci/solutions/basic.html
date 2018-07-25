@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Basic fibonacci</title>
+</head>
+<body>
+  <script>
+    function write (output) {
+      let el = document.createElement('body')
+      el.innerHTML = output
+      document.getElementsByTagName('body')[0].appendChild(el)
+    }
+    function fibonacci (a, b, stop = 100) {
+      if (b <= stop) {
+        setTimeout(() => {
+          write(b)
+          fibonacci(b, a + b, stop)
+        }, 200)
+      }
+    }
+
+    let a = 1, b = 1
+    write(a)
+    fibonacci(a, b, 1000000)
+  </script>
+</body>
+</html>
